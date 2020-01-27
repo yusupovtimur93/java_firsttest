@@ -28,9 +28,6 @@ public class GroupCreationTests {
 
     @Test
     public void testGroupCreationTests() throws Exception {
-
-        driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("http://localhost/addressbook/");
         driver.findElement(By.name("user")).click();
         driver.findElement(By.name("user")).clear();
