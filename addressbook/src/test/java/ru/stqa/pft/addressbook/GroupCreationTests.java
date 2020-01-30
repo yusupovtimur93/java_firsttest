@@ -55,7 +55,6 @@ public class GroupCreationTests {
     }
 
     private void fillGroupForm(GroupDate groupDate) {
-        
         driver.findElement(By.name("group_name")).click();
         driver.findElement(By.name("group_name")).clear();
         driver.findElement(By.name("group_name")).sendKeys(groupDate.getName());
