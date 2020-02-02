@@ -15,7 +15,7 @@
 	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:186)
 	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:156)
 	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:134)
-	at ru.stqa.pft.addressbook.GroupCreationTests.testGroupCreationTests(GroupCreationTests.java:23)
+	at ru.stqa.pft.addressbook.tests.GroupCreationTests.testGroupCreationTests(GroupCreationTests.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

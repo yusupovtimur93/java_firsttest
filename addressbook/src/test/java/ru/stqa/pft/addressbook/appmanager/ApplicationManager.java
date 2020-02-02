@@ -1,22 +1,20 @@
-package ru.stqa.pft.addressbook;
+package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import ru.stqa.pft.addressbook.model.GroupDate;
 
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.fail;
 
-public class TestBase {
+public class ApplicationManager {
     protected WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
-    @BeforeClass(alwaysRun = true)
-    public void setUp() throws Exception {
+    public void init() {
         System.setProperty("webdriver.gecko.driver", "C:/WebDriver/bin/geckodriver.exe");
         driver = new FirefoxDriver();
         baseUrl = "https://www.google.com/";
@@ -34,15 +32,15 @@ public class TestBase {
         driver.findElement(By.xpath("//input[@value='Login']")).click();
     }
 
-    protected void returnToGroupPage() {
+    public void returnToGroupPage() {
         driver.findElement(By.linkText("group page")).click();
     }
 
-    protected void sumbitGroupCreation() {
+    public void sumbitGroupCreation() {
         driver.findElement(By.name("submit")).click();
     }
 
-    protected void fillGroupForm(GroupDate groupDate) {
+    public void fillGroupForm(GroupDate groupDate) {
         driver.findElement(By.name("group_name")).click();
         driver.findElement(By.name("group_name")).clear();
         driver.findElement(By.name("group_name")).sendKeys(groupDate.getName());
@@ -54,16 +52,15 @@ public class TestBase {
         driver.findElement(By.name("group_footer")).sendKeys(groupDate.getFooter());
     }
 
-    protected void initGroupCreation() {
+    public void initGroupCreation() {
         driver.findElement(By.name("new")).click();
     }
 
-    protected void gotoGroupPage() {
+    public void gotoGroupPage() {
         driver.findElement(By.linkText("groups")).click();
     }
 
-    @AfterClass(alwaysRun = true)
-    public void tearDown() throws Exception {
+    public void stop() {
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
@@ -71,44 +68,12 @@ public class TestBase {
         }
     }
 
-    private boolean isElementPresent(By by) {
-        try {
-            driver.findElement(by);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
 
-    private boolean isAlertPresent() {
-        try {
-            driver.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
-
-    private String closeAlertAndGetItsText() {
-        try {
-            Alert alert = driver.switchTo().alert();
-            String alertText = alert.getText();
-            if (acceptNextAlert) {
-                alert.accept();
-            } else {
-                alert.dismiss();
-            }
-            return alertText;
-        } finally {
-            acceptNextAlert = true;
-        }
-    }
-
-    protected void deleteSelectedGroups() {
+    public void deleteSelectedGroups() {
       driver.findElement(By.name("delete")).click();
     }
 
-    protected void selectGroup() {
+    public void selectGroup() {
       driver.findElement(By.name("selected[]")).click();
     }
 }
