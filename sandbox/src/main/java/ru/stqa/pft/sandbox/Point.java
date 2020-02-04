@@ -13,4 +13,15 @@ public class Point {
         this.p4 = p4;
 
     }
+
+    public static void primer(String args) {
+        Point p = new Point(5, 50, 50, 50);
+
+    }
+
+    public double distance() {
+        return Math.sqrt(Math.pow(this.p1 - this.p2, 2) + Math.pow(this.p3 - this.p4, 2));
+    }
+
+
 }

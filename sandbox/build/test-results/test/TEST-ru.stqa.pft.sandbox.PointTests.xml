@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.sandbox.PointTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-04T18:37:03" hostname="DESKTOP-B163PRC" time="0.006">
+  <properties/>
+  <testcase name="testPoint" classname="ru.stqa.pft.sandbox.PointTests" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
