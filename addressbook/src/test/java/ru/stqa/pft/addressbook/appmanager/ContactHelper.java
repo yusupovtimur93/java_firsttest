@@ -34,9 +34,21 @@ public class ContactHelper extends HelperBase {
         click(By.name("update"));
     }
 
-    public void selectGroup() {
+    public void selectGroupInContact() {
         click(By.name("new_group"));
         new Select(driver.findElement(By.name("new_group"))).selectByVisibleText("test1");
 
+    }
+
+    public void selectContact() {
+        click(By.name("selected[]"));
+    }
+
+    public void deleteContactButton() {
+        click(By.xpath("//input[@value='Delete']"));
+    }
+
+    public void deleteAprove() {
+        driver.switchTo().alert().accept();
     }
 }
