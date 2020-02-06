@@ -15,6 +15,10 @@ public class NavigationHelper extends HelperBase{
     }
 
     public void gotoHomePage() {
-        click(By.linkText("home page"));
+        click(By.linkText("home"));
+    }
+
+    public void editContact() {
+        click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
     }
 }

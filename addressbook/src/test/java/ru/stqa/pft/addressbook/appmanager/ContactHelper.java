@@ -2,6 +2,7 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.ContactDate;
 
 public class ContactHelper extends HelperBase {
@@ -14,7 +15,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void sumbitContactCreation() {
-      driver.findElement(By.name("submit")).click();
+      click(By.name("submit"));
     }
 
     public void fillContactForm(ContactDate contactDate) {
@@ -22,9 +23,20 @@ public class ContactHelper extends HelperBase {
         type(By.name("middlename"),contactDate.getMiddlename());
         type(By.name("lastname"),contactDate.getLastname());
         type(By.name("home"),contactDate.getHomephone());
+        
     }
 
     public void initContactCreation() {
       driver.findElement(By.linkText("add new")).click();
+    }
+
+    public void updateContact() {
+        click(By.name("update"));
+    }
+
+    public void selectGroup() {
+        click(By.name("new_group"));
+        new Select(driver.findElement(By.name("new_group"))).selectByVisibleText("test1");
+
     }
 }

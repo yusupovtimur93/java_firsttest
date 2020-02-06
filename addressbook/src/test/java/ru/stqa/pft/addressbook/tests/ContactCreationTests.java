@@ -13,6 +13,7 @@ public class ContactCreationTests extends TestBase{
   public void testContactCreation() throws Exception {
     app.getContactHelper().initContactCreation();
     app.getContactHelper().fillContactForm(new ContactDate("firstname_1", "middle_1", "last_1", "012345678"));
+    app.getContactHelper().selectGroup();
     app.getContactHelper().sumbitContactCreation();
     app.getNavigationHelper().gotoHomePage();
   }
