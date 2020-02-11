@@ -29,13 +29,13 @@ public class ApplicationManager {
 
 
     public void init() {
-        if (browser == BrowserType.FIREFOX) {
+        if (browser.equals(BrowserType.FIREFOX)) {
             System.setProperty("webdriver.gecko.driver", "C:/WebDriver/bin/geckodriver.exe");
             driver = new FirefoxDriver();
-        } else  if (browser == BrowserType.CHROME) {
+        } else  if (browser.equals(BrowserType.CHROME)) {
             System.setProperty("webdriver.chrome.driver", "C:/WebDriver/bin/chromedriver.exe");
             driver = new ChromeDriver();
-        } else  if (browser == BrowserType.IE) {
+        } else  if (browser.equals(BrowserType.IE)) {
             System.setProperty("webdriver.ie.driver", "C:/WebDriver/bin/IEDriverServer.exe");
             driver = new InternetExplorerDriver();
         }
