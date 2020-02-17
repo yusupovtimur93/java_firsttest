@@ -11,9 +11,8 @@ public class ContactCreationTests extends TestBase{
 
   @Test
   public void testContactCreation() throws Exception {
-    app.getContactHelper().initContactCreation();
-    app.getContactHelper().fillContactForm(new ContactDate("firstname_1", "middle_1", "last_1", "012345678", "test1"), true);
-      app.getContactHelper().sumbitContactCreation();
+    app.getContactHelper().createContact(new ContactDate("firstname_1", "middle_1", "last_1", "012345678", "test1"), true);
+
     app.getNavigationHelper().gotoHomePage();
   }
 

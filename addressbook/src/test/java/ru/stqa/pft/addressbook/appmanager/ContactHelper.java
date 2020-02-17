@@ -63,4 +63,15 @@ public class ContactHelper extends HelperBase {
     public void deleteAprove() {
         driver.switchTo().alert().accept();
     }
+
+    public void createContact(ContactDate contact, boolean b) {
+
+        initContactCreation();
+        fillContactForm(contact, b);
+        sumbitContactCreation();
+    }
+
+    public boolean isThereAcontact() {
+        return isElementPresent(By.name("selected[]"));
+    }
 }
