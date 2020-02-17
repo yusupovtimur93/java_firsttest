@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Gradle Test Executor 30" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-02-06T18:53:47" hostname="DESKTOP-B163PRC" time="4.594">
+<testsuite name="Gradle Test Executor 6" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-02-17T15:19:04" hostname="DESKTOP-B163PRC" time="71.915">
   <properties/>
-  <testcase name="failed to execute tests" classname="Gradle Test Executor 30" time="4.594">
-    <failure message="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 30." type="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException">org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 30.
+  <testcase name="failed to execute tests" classname="Gradle Test Executor 6" time="71.915">
+    <failure message="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 6." type="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException">org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 6.
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
