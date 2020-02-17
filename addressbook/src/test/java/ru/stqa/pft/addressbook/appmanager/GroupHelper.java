@@ -43,4 +43,16 @@ public class GroupHelper extends HelperBase {
     public void sumbitGroupModification() {
         click(By.name("update"));
     }
+
+    public void createGroup(GroupDate group) {
+        initGroupCreation();
+        fillGroupForm(group);
+        sumbitGroupCreation();
+        returnToGroupPage();
+    }
+
+    public boolean isThereAgroup() {
+        return isElementPresent(By.name("selected[]"));
+
+    }
 }
