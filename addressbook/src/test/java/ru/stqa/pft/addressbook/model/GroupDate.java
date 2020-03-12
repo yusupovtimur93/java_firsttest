@@ -4,24 +4,28 @@ import java.util.Objects;
 
 public class GroupDate {
     private final String name;
-    private final String id;
+    private int id;
     private final String header;
     private final String footer;
 
-    public GroupDate(String id,String name, String header, String footer) {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public GroupDate(int id, String name, String header, String footer) {
         this.id = id;
         this.name = name;
         this.header = header;
         this.footer = footer;
     }
     public GroupDate(String name, String header, String footer) {
-        this.id = null;
+        this.id = 0;
         this.name = name;
         this.header = header;
         this.footer = footer;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
