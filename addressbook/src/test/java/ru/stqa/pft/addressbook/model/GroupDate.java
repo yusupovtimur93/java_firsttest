@@ -19,7 +19,7 @@ public class GroupDate {
         this.footer = footer;
     }
     public GroupDate(String name, String header, String footer) {
-        this.id = 0;
+        this.id = Integer.MAX_VALUE;
         this.name = name;
         this.header = header;
         this.footer = footer;
