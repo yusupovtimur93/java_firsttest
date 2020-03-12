@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Gradle Test Executor 7" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-02-17T17:48:17" hostname="DESKTOP-B163PRC" time="7.325">
+<testsuite name="Gradle Test Executor 7" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-03-12T12:58:41" hostname="DESKTOP-B163PRC" time="5.323">
   <properties/>
-  <testcase name="failed to execute tests" classname="Gradle Test Executor 7" time="7.325">
+  <testcase name="failed to execute tests" classname="Gradle Test Executor 7" time="5.323">
     <failure message="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 7." type="org.gradle.api.internal.tasks.testing.TestSuiteExecutionException">org.gradle.api.internal.tasks.testing.TestSuiteExecutionException: Could not complete execution for Gradle Test Executor 7.
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
