@@ -48,11 +48,23 @@ public class GroupHelper extends HelperBase {
         click(By.name("update"));
     }
 
-    public void createGroup(GroupDate group) {
+    public void create(GroupDate group) {
         initGroupCreation();
         fillGroupForm(group);
         sumbitGroupCreation();
         returnToGroupPage();
+    }
+    public void modify(int index, GroupDate group) {
+        selectGroup(index);
+        initGroupModification();
+        fillGroupForm(group);
+        sumbitGroupModification();
+        returnToGroupPage();
+    }
+    public void delete(int index) {
+      selectGroup(index);
+      deleteSelectedGroups();
+      returnToGroupPage();
     }
 
     public boolean isThereAgroup() {
@@ -63,7 +75,7 @@ public class GroupHelper extends HelperBase {
         return driver.findElements(By.name("selected[]")).size();
     }
 
-    public List<GroupDate> getGroupList() {
+    public List<GroupDate> List() {
         List<GroupDate> groups = new ArrayList<GroupDate>();
         List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
         for (WebElement element : elements) {
