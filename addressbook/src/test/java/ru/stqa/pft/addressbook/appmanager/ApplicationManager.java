@@ -8,8 +8,6 @@ import org.openqa.selenium.remote.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.testng.Assert.fail;
-
 public class ApplicationManager {
 
     private  String browser;
@@ -51,10 +49,6 @@ public class ApplicationManager {
 
     public void stop() {
         driver.quit();
-        String verificationErrorString = verificationErrors.toString();
-        if (!"".equals(verificationErrorString)) {
-            fail(verificationErrorString);
-        }
     }
 
     public GroupHelper getGroupHelper() {
