@@ -3,26 +3,31 @@ package ru.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class GroupDate {
-    private final String name;
-    private int id;
-    private final String header;
-    private final String footer;
 
-    public void setId(int id) {
-        this.id = id;
+
+    private int id = Integer.MAX_VALUE;
+    private String name;
+    private String header;
+    private String footer;
+
+    public GroupDate withName(String name) {
+        this.name = name;
+        return this;
     }
 
-    public GroupDate(int id, String name, String header, String footer) {
-        this.id = id;
-        this.name = name;
+    public GroupDate withHeader(String header) {
         this.header = header;
-        this.footer = footer;
+        return this;
     }
-    public GroupDate(String name, String header, String footer) {
-        this.id = Integer.MAX_VALUE;
-        this.name = name;
-        this.header = header;
+
+    public GroupDate withFooter(String footer) {
         this.footer = footer;
+        return this;
+    }
+
+    public GroupDate withId(int id) {
+        this.id = id;
+        return this;
     }
 
     public int getId() {
